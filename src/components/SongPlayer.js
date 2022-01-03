@@ -1,7 +1,13 @@
 import React from 'react'
+import QueuedSongs from './QueuedSongs'
 
 function SongPlayer(){
-    return <div>player</div>
+    return (
+    <div>
+        player
+        <QueuedSongs />
+    </div>
+    )
 }
 
 export default SongPlayer;
