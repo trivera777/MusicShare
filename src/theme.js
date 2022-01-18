@@ -3,7 +3,7 @@ import { pink, teal } from '@material-ui/core/colors'
 
 const theme = createTheme({
     palette: {
-        type: "light",
+        type: "dark",
         primary: pink,
         secondary: teal
     }
