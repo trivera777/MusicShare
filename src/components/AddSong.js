@@ -1,4 +1,5 @@
-import { InputAdornment, TextField } from '@material-ui/core'
+import { InputAdornment, TextField, Button } from '@material-ui/core'
+import { Link, AddBoxOutlined } from "@material-ui/icons"
 import React from 'react'
 
 function AddSong(){
@@ -17,6 +18,13 @@ function AddSong(){
                 )
             }}
             />
+            <Button
+            variant="contained"
+            color="primary"
+            endIcon={<AddBoxOutlined />}
+            >
+                add
+            </Button>
         </div>
         )
 }
