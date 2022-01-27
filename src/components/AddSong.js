@@ -47,7 +47,7 @@ function AddSong() {
       >
         <DialogTitle>Edit Song</DialogTitle>
         <DialogContent>
-          <img src="" alt="Song thumbnail" className={classes.thumbnail} />
+          <img src="https://www.youtube.com/watch?v=uKSAqOZpaQs" alt="Song thumbnail" className={classes.thumbnail} />
           <TextField margin="dense" name="title" label="Title" fullWidth />
           <TextField margin="dense" name="artist" label="Artist" fullWidth />
           <TextField
