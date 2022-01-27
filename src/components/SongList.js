@@ -7,7 +7,7 @@ import {
   Typography,
   Card,
 } from "@material-ui/core";
-import { PlayArrow, Save} from "@material-ui/icons"
+import { PlayArrow, Save } from "@material-ui/icons";
 import React from "react";
 
 function SongList() {
@@ -16,7 +16,8 @@ function SongList() {
   const song = {
     title: "after hours",
     artist: "53 Thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg",
+    thumbnail:
+      "https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg",
   };
 
   if (loading) {
@@ -54,17 +55,17 @@ function Song({ song }) {
               {title}
             </Typography>
             <Typography variant="body1" component="p" color="textSecondary">
-              {title}
+              {artist}
             </Typography>
           </CardContent>
-        <CardActions>
-          <IconButton size="small" color="primary">
-            <PlayArrow />
-          </IconButton>
-          <IconButton size="small" color="secondary">
-            <Save />
-          </IconButton>
-        </CardActions>
+          <CardActions>
+            <IconButton size="small" color="primary">
+              <PlayArrow />
+            </IconButton>
+            <IconButton size="small" color="secondary">
+              <Save />
+            </IconButton>
+          </CardActions>
         </div>
       </div>
     </Card>

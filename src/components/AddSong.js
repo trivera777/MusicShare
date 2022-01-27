@@ -47,7 +47,7 @@ function AddSong() {
       >
         <DialogTitle>Edit Song</DialogTitle>
         <DialogContent>
-          <img src="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg" alt="Song thumbnail" className={classes.thumbnail} />
+          <img src="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=COzIy48G&rs=AOn4CLDIhN0gvgVd-EBb89WLQ3byhGJyjA" alt="Song thumbnail" className={classes.thumbnail} />
           <TextField margin="dense" name="title" label="Title" fullWidth />
           <TextField margin="dense" name="artist" label="Artist" fullWidth />
           <TextField
