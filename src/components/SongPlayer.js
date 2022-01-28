@@ -5,42 +5,42 @@ import {
   IconButton,
   Slider,
   CardMedia,
-  makeStyles
+  makeStyles,
 } from "@material-ui/core";
 import { PlayArrow, SkipPrevious, SkipNext } from "@material-ui/icons";
 import React from "react";
 import QueuedSongs from "./QueuedSongs";
 
-const useStyles = makeStyles(theme => ({
-    container: {
-        display: 'flex',
-        justifyContent: 'space-between',
-    },
-    details: {
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '0px 15px'
-    },
-    content: {
-        flex: '1 0 auto'
-    },
-    thumbnail: {
-        width: 150
-    },
-    controls: {
-        display: 'flex',
-        alignItems: 'center',
-        paddingLeft: theme.spacing(1),
-        paddingRight: theme.spacing(1)
-    },
-    playIcon: {
-        height: 38,
-        width: 38
-    }
-}))
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  details: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "0px 15px",
+  },
+  content: {
+    flex: "1 0 auto",
+  },
+  thumbnail: {
+    width: 150,
+  },
+  controls: {
+    display: "flex",
+    alignItems: "center",
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+  },
+  playIcon: {
+    height: 38,
+    width: 38,
+  },
+}));
 
 function SongPlayer() {
-    const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <>
@@ -70,7 +70,10 @@ function SongPlayer() {
           </div>
           <Slider type="range" min={0} max={1} step={0.01} />
         </div>
-        <CardMedia className={classes.thumbnail} image="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg" />
+        <CardMedia
+          className={classes.thumbnail}
+          image="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg"
+        />
       </Card>
       <QueuedSongs />
     </>
