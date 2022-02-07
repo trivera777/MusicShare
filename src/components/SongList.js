@@ -17,7 +17,7 @@ function SongList() {
     title: "after hours",
     artist: "53 Thieves",
     thumbnail:
-      "https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg",
+      "https://www.youtube.com/watch?v=PVTtPEtIJ28&t=118s",
   };
 
   if (loading) {
