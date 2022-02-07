@@ -1,3 +1,4 @@
+import React from "react";
 import {
   InputAdornment,
   TextField,
@@ -9,9 +10,8 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { Link, AddBoxOutlined } from "@material-ui/icons";
-import React from "react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     alignItems: "center",
@@ -48,7 +48,7 @@ function AddSong() {
         <DialogTitle>Edit Song</DialogTitle>
         <DialogContent>
           <img
-            src="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=COzIy48G&rs=AOn4CLDIhN0gvgVd-EBb89WLQ3byhGJyjA"
+            src="http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg"
             alt="Song thumbnail"
             className={classes.thumbnail}
           />

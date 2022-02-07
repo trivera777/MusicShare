@@ -1,3 +1,5 @@
+import React from "react";
+import QueuedSongs from "./QueuedSongs";
 import {
   CardContent,
   Typography,
@@ -8,10 +10,8 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { PlayArrow, SkipPrevious, SkipNext } from "@material-ui/icons";
-import React from "react";
-import QueuedSongs from "./QueuedSongs";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     justifyContent: "space-between",
@@ -72,7 +72,7 @@ function SongPlayer() {
         </div>
         <CardMedia
           className={classes.thumbnail}
-          image="https://i.ytimg.com/an_webp/8cQSCIWHwRQ/mqdefault_6s.webp?du=3000&sqp=CKTTx48G&rs=AOn4CLBzUKfsQ8jTYzg5GGZR75yqHxEYZg"
+          image="http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg"
         />
       </Card>
       <QueuedSongs />

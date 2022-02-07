@@ -14,10 +14,9 @@ function SongList() {
   let loading = false;
 
   const song = {
-    title: "after hours",
-    artist: "53 Thieves",
-    thumbnail:
-      "https://www.youtube.com/watch?v=PVTtPEtIJ28&t=118s",
+    title: "LÜNE",
+    artist: "MÖÖN",
+    thumbnail: "http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg",
   };
 
   if (loading) {

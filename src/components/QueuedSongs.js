@@ -1,15 +1,15 @@
+import React from "react";
 import { Avatar, IconButton, Typography, makeStyles, useMediaQuery } from "@material-ui/core";
 import { Delete } from "@material-ui/icons";
-import React from "react";
 
 function QueuedSongList() {
     const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'));
     
   const song = {
-    title: "after hours",
-    artist: "53 Thieves",
+    title: "LÜNE",
+    artist: "MÖÖN",
     thumbnail:
-      "hhttps://i.ytimg.com/an_webp/-7sMHNBi6yI/mqdefault_6s.webp?du=3000&sqp=CPKAgJAG&rs=AOn4CLCiwGqR9RTJEeZekTKPnprGGSC6zA",
+      "http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg",
   };
 
   return greaterThanMd && (
