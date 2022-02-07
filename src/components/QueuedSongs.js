@@ -1,16 +1,18 @@
-import { Avatar, IconButton, Typography, makeStyles ,useMediaQuery } from "@material-ui/core";
+import { Avatar, IconButton, Typography, makeStyles, useMediaQuery } from "@material-ui/core";
 import { Delete } from "@material-ui/icons";
 import React from "react";
 
 function QueuedSongList() {
+    const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'));
+    
   const song = {
     title: "after hours",
     artist: "53 Thieves",
     thumbnail:
-      "https://www.youtube.com/watch?v=PVTtPEtIJ28&t=118s",
+      "hhttps://i.ytimg.com/an_webp/-7sMHNBi6yI/mqdefault_6s.webp?du=3000&sqp=CPKAgJAG&rs=AOn4CLCiwGqR9RTJEeZekTKPnprGGSC6zA",
   };
 
-  return (
+  return greaterThanMd && (
     <div style={{ margin: "10px 0" }}>
       <Typography color="textSecondary" variant="button">
         Queue (5)
