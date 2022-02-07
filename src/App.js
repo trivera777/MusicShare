@@ -3,9 +3,11 @@ import Header from "./components/Header";
 import AddSong from "./components/AddSong";
 import SongList from "./components/SongList";
 import SongPlayer from "./components/SongPlayer";
-import { Grid } from "@material-ui/core";
+import { Grid, useMediaQuery } from "@material-ui/core";
 
 function App() {
+  const matches = useMediaQuery('(min-width: 600px)');
+  console.log(matches);
   return (
     <>
       <Header />
