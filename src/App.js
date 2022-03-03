@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import AddSong from "./components/AddSong";
 import SongList from "./components/SongList";
 import SongPlayer from "./components/SongPlayer";
-import { Grid, useMediaQuery } from "@material-ui/core";
+import { Grid, useMediaQuery, Hidden } from "@material-ui/core";
 
 function App() {
   const greaterThanSm = useMediaQuery((theme) => theme.breakpoints.up("sm"));
@@ -11,7 +11,9 @@ function App() {
 
   return (
     <>
-      {greaterThanSm && <Header />}
+      <Hidden only="xs" >
+        <Header />
+        </Hidden>
       <Grid container spacing={3}>
         <Grid
           style={{
