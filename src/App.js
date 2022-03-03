@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       {greaterThanSm && <Header />}
-      <Header />
       <Grid container spacing={3}>
         <Grid
           style={{
