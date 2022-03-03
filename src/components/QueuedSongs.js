@@ -1,26 +1,33 @@
 import React from "react";
-import { Avatar, IconButton, Typography, makeStyles, useMediaQuery } from "@material-ui/core";
+import {
+  Avatar,
+  IconButton,
+  Typography,
+  makeStyles,
+  useMediaQuery,
+} from "@material-ui/core";
 import { Delete } from "@material-ui/icons";
 
 function QueuedSongList() {
-    const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up('md'));
-    
+  const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up("md"));
+
   const song = {
     title: "LÜNE",
     artist: "MÖÖN",
-    thumbnail:
-      "http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg",
+    thumbnail: "http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg",
   };
 
-  return greaterThanMd && (
-    <div style={{ margin: "10px 0" }}>
-      <Typography color="textSecondary" variant="button">
-        Queue (5)
-      </Typography>
-      {Array.from({ length: 5 }, () => song).map((song, i) => (
-        <QueuedSong key={i} song={song} />
-      ))}
-    </div>
+  return (
+    greaterThanMd && (
+      <div style={{ margin: "10px 0" }}>
+        <Typography color="textSecondary" variant="button">
+          Queue (5)
+        </Typography>
+        {Array.from({ length: 5 }, () => song).map(song => (
+          <QueuedSong key={song.id} song={song} />
+        ))}
+      </div>
+    )
   );
 }
 
@@ -54,9 +61,15 @@ function QueuedSong({ song }) {
   return (
     <div className={classes.container}>
       <Avatar src={thumbnail} alt="Song Thumbnail" className={classes.avatar} />
-      <div className={classes.songInfoContainer} >
-        <Typography variant="subtitle2" className={classes.text}>{title}</Typography>
-        <Typography color="textSecondary" variant="body2" className={classes.text}>
+      <div className={classes.songInfoContainer}>
+        <Typography variant="subtitle2" className={classes.text}>
+          {title}
+        </Typography>
+        <Typography
+          color="textSecondary"
+          variant="body2"
+          className={classes.text}
+        >
           {artist}
         </Typography>
       </div>
@@ -64,7 +77,7 @@ function QueuedSong({ song }) {
         <Delete color="error" />
       </IconButton>
     </div>
-  )
-};
+  );
+}
 
 export default QueuedSongList;
