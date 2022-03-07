@@ -1,3 +1,4 @@
+import { useQuery } from "@apollo/react-hooks";
 import {
   CardActions,
   CardContent,
@@ -6,19 +7,20 @@ import {
   IconButton,
   Typography,
   Card,
-  makeStyles
+  makeStyles,
 } from "@material-ui/core";
 import { PlayArrow, Save } from "@material-ui/icons";
 import React from "react";
+import { GET_SONGS } from "../graphql/queries";
 
 function SongList() {
-  let loading = false;
+  const { data, loading, error } = useQuery(GET_SONGS);
 
-  const song = {
-    title: "two days",
-    artist: "53 thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/zh0c8h1Aup4/mqdefault_6s.webp?du=3000&sqp=CKLwlZEG&rs=AOn4CLDcYov_mkJV_1oVbDsFpp0LwCR3yg",
-  };
+  // const song = {
+  //   title: "two days",
+  //   artist: "53 thieves",
+  //   thumbnail: "https://i.ytimg.com/an_webp/zh0c8h1Aup4/mqdefault_6s.webp?du=3000&sqp=CKLwlZEG&rs=AOn4CLDcYov_mkJV_1oVbDsFpp0LwCR3yg",
+  // };
 
   if (loading) {
     return (
@@ -34,33 +36,35 @@ function SongList() {
       </div>
     );
   }
+  if (error) return <div>Error fetching songs </div>;
+
   return (
     <div>
-      {Array.from({ length: 10 }, () => song).map((song, i) => (
-        <Song key={i} song={song} />
+      {data.songs.map(song => (
+        <Song key={song.id} song={song} />
       ))}
     </div>
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
-    margin: theme.spacing(3)
+    margin: theme.spacing(3),
   },
   songInfoContainer: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   songInfo: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   thumbnail: {
     objectFit: "cover",
     width: 140,
-    height: 140
-  }
+    height: 140,
+  },
 }));
 
 function Song({ song }) {
@@ -68,10 +72,10 @@ function Song({ song }) {
   const { thumbnail, artist, title } = song;
 
   return (
-    <Card className={classes.container} >
-      <div className={classes.songInfoContainer} >
+    <Card className={classes.container}>
+      <div className={classes.songInfoContainer}>
         <CardMedia image={thumbnail} className={classes.thumbnail} />
-        <div className={classes.songInfo} >
+        <div className={classes.songInfo}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {title}
