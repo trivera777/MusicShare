@@ -12,9 +12,9 @@ function QueuedSongList() {
   const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up("md"));
 
   const song = {
-    title: "LÜNE",
-    artist: "MÖÖN",
-    thumbnail: "http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg",
+    title: "two days",
+    artist: "53 thieves",
+    thumbnail: "https://i.ytimg.com/an_webp/zh0c8h1Aup4/mqdefault_6s.webp?du=3000&sqp=CKLwlZEG&rs=AOn4CLDcYov_mkJV_1oVbDsFpp0LwCR3yg",
   };
 
   return (
