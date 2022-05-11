@@ -48,7 +48,7 @@ function AddSong() {
         <DialogTitle>Edit Song</DialogTitle>
         <DialogContent>
           <img
-            src="http://img.youtube.com/vi/--ZtUFsIgMk/0.jpg"
+            src="https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=COSl7JMG&rs=AOn4CLAGkmGAAesad-68bwkt3mMc4qaA2g"
             alt="Song thumbnail"
             className={classes.thumbnail}
           />
