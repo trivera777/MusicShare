@@ -23,8 +23,8 @@ function QueuedSongList() {
         <Typography color="textSecondary" variant="button">
           Queue (5)
         </Typography>
-        {Array.from({ length: 5 }, () => song).map((song) => (
-          <QueuedSong key={song.id} song={song} />
+        {Array.from({ length: 5 }, () => song).map((song, i) => (
+          <QueuedSong key={i} song={song} />
         ))}
       </div>
     )
