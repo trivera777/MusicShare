@@ -15,11 +15,11 @@ import { GET_SONGS } from "../graphql/queries";
 
 function SongList() {
   let loading = false;
-  
+
   const song = {
-    title: "two days",
+    title: "third floor",
     artist: "53 thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/zh0c8h1Aup4/mqdefault_6s.webp?du=3000&sqp=CKLwlZEG&rs=AOn4CLDcYov_mkJV_1oVbDsFpp0LwCR3yg",
+    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA",
   };
 
   if (loading) {
