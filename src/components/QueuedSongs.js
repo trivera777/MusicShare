@@ -12,9 +12,9 @@ function QueuedSongList() {
   const greaterThanMd = useMediaQuery(theme => theme.breakpoints.up("md"));
 
   const song = {
-    title: "two days",
+    title: "third floor",
     artist: "53 thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=COSl7JMG&rs=AOn4CLAGkmGAAesad-68bwkt3mMc4qaA2g",
+    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA",
   };
 
   return (
@@ -23,7 +23,7 @@ function QueuedSongList() {
         <Typography color="textSecondary" variant="button">
           Queue (5)
         </Typography>
-        {Array.from({ length: 5 }, () => song).map(song => (
+        {Array.from({ length: 5 }, () => song).map((song) => (
           <QueuedSong key={song.id} song={song} />
         ))}
       </div>

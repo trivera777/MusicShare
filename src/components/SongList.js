@@ -14,8 +14,8 @@ import React from "react";
 import { GET_SONGS } from "../graphql/queries";
 
 function SongList() {
-  const { data, loading, error } = useQuery(GET_SONGS);
-
+  let loading = false;
+  
   const song = {
     title: "two days",
     artist: "53 thieves",
@@ -36,35 +36,34 @@ function SongList() {
       </div>
     );
   }
-  if (error) return <div>Error fetching songs </div>;
-
   return (
     <div>
-      {data.songs.map(song => (
-        <Song key={song.id} song={song} />
+      {Array.from({ length: 10 }, () => song).map((song, i) => (
+        <Song key={i} song={song} />
       ))}
     </div>
+    
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
-    margin: theme.spacing(3),
+    margin: theme.spacing(3)
   },
   songInfoContainer: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "center"
   },
   songInfo: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   thumbnail: {
     objectFit: "cover",
     width: 140,
-    height: 140,
-  },
+    height: 140
+  }
 }));
 
 function Song({ song }) {
