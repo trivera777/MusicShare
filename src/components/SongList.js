@@ -1,4 +1,4 @@
-import { useQuery } from "@apollo/react-hooks";
+import React from "react";
 import {
   CardActions,
   CardContent,
@@ -10,8 +10,6 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { PlayArrow, Save } from "@material-ui/icons";
-import React from "react";
-import { GET_SONGS } from "../graphql/queries";
 
 function SongList() {
   let loading = false;
@@ -19,7 +17,8 @@ function SongList() {
   const song = {
     title: "third floor",
     artist: "53 thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA",
+    thumbnail:
+      "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA",
   };
 
   if (loading) {
@@ -42,28 +41,27 @@ function SongList() {
         <Song key={i} song={song} />
       ))}
     </div>
-    
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
-    margin: theme.spacing(3)
+    margin: theme.spacing(3),
   },
   songInfoContainer: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   songInfo: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   thumbnail: {
     objectFit: "cover",
     width: 140,
-    height: 140
-  }
+    height: 140,
+  },
 }));
 
 function Song({ song }) {
