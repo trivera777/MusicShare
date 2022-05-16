@@ -6,6 +6,8 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import theme from "./theme";
 import client from './graphql/client'
 
+
+
 ReactDOM.render(
   <ApolloProvider client={client}>
     <MuiThemeProvider theme={theme}>
@@ -15,3 +17,4 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById("root")
 );
+
