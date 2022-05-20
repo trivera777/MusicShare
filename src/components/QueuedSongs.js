@@ -14,7 +14,7 @@ function QueuedSongList() {
   const song = {
     title: "third floor",
     artist: "53 thieves",
-    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA",
+    thumbnail: "https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CLiJlZQG&rs=AOn4CLAblNZfQBe6hZaMifUCrrYsY7tMGA",
   };
 
   return (

@@ -72,7 +72,7 @@ function SongPlayer() {
         </div>
         <CardMedia
           className={classes.thumbnail}
-          image="https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CMTP-5MG&rs=AOn4CLDv8qptCH86js8P4U3HrEPEHY8WqA"
+          image="https://i.ytimg.com/an_webp/QIjDVf52J1Q/mqdefault_6s.webp?du=3000&sqp=CLiJlZQG&rs=AOn4CLAblNZfQBe6hZaMifUCrrYsY7tMGA"
         />
       </Card>
       <QueuedSongs />
